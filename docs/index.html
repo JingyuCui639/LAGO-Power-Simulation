@@ -15,7 +15,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      grid-template-columns: repeat(2, 1fr); /* 3 columns */
       gap: 16px;
     }
     .cell {
@@ -37,7 +37,7 @@
       display: block;
     }
     @media (max-width: 1100px) {
-      .grid { grid-template-columns: repeat(2, 1fr); } /* 2 columns on smaller screens */
+      .grid { grid-template-columns: repeat(3, 1fr); } /* 2 columns on smaller screens */
     }
     @media (max-width: 700px) {
       .grid { grid-template-columns: 1fr; } /* 1 column on phones */
