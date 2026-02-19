@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Interactive Plot Grid (3×2)</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 24px; }
+    body { font-family: Arial, sans-serif; margin: 10px; }
     h1 { margin: 0 0 16px 0; font-size: 22px; }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(260px, 1fr)); /* 2 columns */
+      grid-template-columns: repeat(2, minmax(420px, 1fr)); /* 2 columns */
       gap: 16px;
-      max-width: 900px;   /* makes cells less wide on large screens */
+      max-width: 1200px;   /* makes cells less wide on large screens */
       margin: 0 auto;     /* center the grid */
     }
 
@@ -42,8 +42,8 @@
       flex: 1 1 auto;          /* fill remaining square area */
     }
 
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; max-width: 900px; }
+    @media (max-width: 1000px) {
+      .grid { grid-template-columns: 1fr; max-width: 1000px; }
     }
   </style>
 </head>
