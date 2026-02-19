@@ -10,8 +10,10 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 columns -> 3 rows for 6 plots */
+      grid-template-columns: repeat(2, minmax(260px, 1fr)); /* 2 columns */
       gap: 16px;
+      max-width: 900px;   /* makes cells less wide on large screens */
+      margin: 0 auto;     /* center the grid */
     }
 
     .cell {
@@ -19,6 +21,9 @@
       border-radius: 10px;
       overflow: hidden;
       background: #fff;
+      aspect-ratio: 1 / 1;     /* <-- square cell */
+      display: flex;
+      flex-direction: column;
     }
 
     .cell-title {
@@ -26,18 +31,19 @@
       font-size: 14px;
       border-bottom: 1px solid #eee;
       background: #fafafa;
+      flex: 0 0 auto;
     }
 
-    iframe {
+    .cell iframe {
       width: 100%;
-      height: 900px;   /* adjust if needed */
+      height: 100%;
       border: 0;
       display: block;
+      flex: 1 1 auto;          /* fill remaining square area */
     }
 
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; } /* stack on smaller screens */
-      iframe { height: 900px; }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; max-width: 520px; }
     }
   </style>
 </head>
